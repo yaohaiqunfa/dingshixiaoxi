@@ -1,52 +1,57 @@
-# Telegram Scheduler
+# React + TypeScript + Vite
 
-> A simple web app to batch send/schedule messages from text file to Telegram chat.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![screenshot](screenshot.png)
+Currently, two official plugins are available:
 
-![screenshot](screenshot_dark.png)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Demo
+## Expanding the ESLint configuration
 
-You can check it [here](https://telegram-scheduler.yshalsager.com).
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Features
-
-- 100% local and safe, no external connections or data collection.
-- Sign in Telegram using browser, no external services or hassle.
-- Save login for future usage.
-- Control how to split the text file by specifying line starts with character.
-- Add text before or after the message from file.
-- Set a start date and time for scheduled messages, control sending interval, and durations to not send in.
-- Live preview your messages text, chat, and time that it will be sent at.
-- Light and Dark themes.
-
-## Technologies / External libraries
-
-- HTML5, CSS, and JavaScript.
-- [Svelte](https://github.com/sveltejs/svelte) + [SvelteKit](https://github.com/sveltejs/kit).
-- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) with [DaisyUI](https://github.com/saadeghi/daisyui).
-- [gramjs](https://github.com/gram-js/gramjs) and [date-fns](https://github.com/date-fns/date-fns).
-- [Vite](https://github.com/vitejs/vite).
-- npm.
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## Building
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-To create a production version of your app:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```bash
-npm run build
+export default tseslint.config({
+  extends: [
+    // other configs...
+    // Enable lint rules for React
+    reactX.configs['recommended-typescript'],
+    // Enable lint rules for React DOM
+    reactDom.configs.recommended,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
-
-You can preview the production build with `npm run preview`.
