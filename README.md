@@ -50,3 +50,23 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## PriceBot（电商价格采集与对比演示）
+
+### CLI
+
+```bash
+pnpm install
+pnpm pricebot search -k "蓝牙耳机" --mode sample --json ./out/result.json --csv ./out/result.csv --report ./out/report.html
+pnpm pricebot search -k "蓝牙耳机" --mode live --report ./out/report.html
+```
+
+### Web Demo
+
+启动开发服务器后访问：
+
+- `/pricebot`：输入关键词，现场运行采集（默认示例模式可直接出结果）
+
+```bash
+pnpm dev
+```

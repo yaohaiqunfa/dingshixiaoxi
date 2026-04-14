@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PriceBot 报告</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <style>
+    :root{--bg:#0b0e14;--panel:#121826;--muted:#a2a8b8;--text:#e7ebf3;--accent:#7c5cff;--ok:#2bd576;--warn:#ffb020;--border:rgba(255,255,255,.08)}
+    body{margin:0;background:radial-gradient(1200px 800px at 10% 0%,rgba(124,92,255,.25),transparent 55%),radial-gradient(900px 700px at 100% 20%,rgba(43,213,118,.18),transparent 60%),var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .wrap{max-width:1180px;margin:28px auto;padding:0 18px}
+    .header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
+    h1{margin:0;font-size:22px;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:980px){.grid{grid-template-columns:1.2fr .8fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .card .hd{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .card .bd{padding:12px 16px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(124,92,255,.16);border:1px solid rgba(124,92,255,.28);color:var(--text);font-size:12px}
+    .table{width:100%;border-collapse:separate;border-spacing:0}
+    .table th,.table td{padding:10px 10px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13px}
+    .table th{color:var(--muted);font-weight:600;text-align:left}
+    .name{max-width:460px}
+    .row-rec{background:linear-gradient(90deg,rgba(43,213,118,.14),transparent 60%)}
+    a{color:inherit}
+    .tag{display:inline-flex;align-items:center;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border);color:var(--muted)}
+    .tag.rec{border-color:rgba(43,213,118,.4);color:var(--ok);background:rgba(43,213,118,.12)}
+    .price{font-variant-numeric:tabular-nums}
+    .foot{margin-top:14px;color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div>
+        <h1>PriceBot 报告</h1>
+        <div class="sub">关键词：蓝牙耳机 · 结果数：6 · 生成时间：2026-04-14T03:36:02.874Z</div>
+      </div>
+      <div class="pill">价格从低到高 · 推荐标注基于性价比评分</div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="hd"><div>商品对比表</div><div class="sub">点击商品名称打开链接</div></div>
+        <div class="bd" style="padding:0">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>平台</th><th class="name">商品</th><th>价格</th><th>销量/评价</th><th>店铺</th><th>评分</th><th>推荐</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><div>价格趋势</div><div class="sub">基于本地历史（多次运行累积）</div></div>
+        <div class="bd"><div id="trend" style="height:320px"></div></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <div class="hd"><div>价格分布</div><div class="sub">Top 15 低价</div></div>
+      <div class="bd"><div id="dist" style="height:280px"></div></div>
+    </div>
+    <div class="foot">提示：京东采集依赖公开搜索页与价格接口；淘宝/拼多多默认示例数据或需自行扩展采集适配器。</div>
+  </div>
+  <script id="payload" type="application/json">{"keyword":"蓝牙耳机","items":[{"platform":"pdd","id":"pdd_70001","name":"蓝牙耳机 真无线 迷你轻巧 触控操作","price":39.9,"sales":58000,"shopRating":4.4,"shopName":"百货直供","url":"https://mobile.yangkeduo.com/goods.html?goods_id=70001","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.8,"recommended":true,"keyword":"蓝牙耳机"},{"platform":"taobao","id":"tb_90002","name":"蓝牙耳机 运动挂耳 防水IPX7","price":59,"sales":34000,"shopRating":4.5,"shopName":"跑者装备店","url":"https://item.taobao.com/item.htm?id=90002","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.6106412755535562,"recommended":true,"keyword":"蓝牙耳机"},{"platform":"taobao","id":"tb_90001","name":"蓝牙耳机 入耳式 HiFi 动圈 续航30小时","price":79,"sales":21000,"shopRating":4.7,"shopName":"音色实验室","url":"https://item.taobao.com/item.htm?id=90001","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.521395011745889,"recommended":true,"keyword":"蓝牙耳机"},{"platform":"jd","id":"100000002","name":"蓝牙耳机 半入耳 低延迟 游戏模式","price":89.9,"sales":8600,"shopRating":4.6,"shopName":"极简数码专营店","url":"https://item.jd.com/100000002.html","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.3413580246913578,"recommended":true,"keyword":"蓝牙耳机"},{"platform":"pdd","id":"pdd_70002","name":"蓝牙耳机 ANC 降噪 双设备连接","price":99,"sales":16000,"shopRating":4.6,"shopName":"数码优选","url":"https://mobile.yangkeduo.com/goods.html?goods_id=70002","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.32263457789773553,"recommended":true,"keyword":"蓝牙耳机"},{"platform":"jd","id":"100000001","name":"蓝牙耳机 TWS 主动降噪 40dB 透明模式","price":129,"sales":12000,"shopRating":4.8,"shopName":"声浪旗舰店","url":"https://item.jd.com/100000001.html","scrapedAt":"2026-04-14T03:36:02.863Z","valueScore":0.21720647773279353,"recommended":false,"keyword":"蓝牙耳机"}],"series":[{"day":"2026-04-08","price":45.9},{"day":"2026-04-09","price":42.9},{"day":"2026-04-10","price":39.9},{"day":"2026-04-11","price":41.9},{"day":"2026-04-12","price":39.9},{"day":"2026-04-13","price":38.9},{"day":"2026-04-14","price":39.9}]}</script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script>
+    const payload = JSON.parse(document.getElementById('payload').textContent)
+    const rows = document.getElementById('rows')
+    rows.innerHTML = payload.items.map(x => {
+      const rec = x.recommended ? 'row-rec' : ''
+      const tag = x.recommended ? '<span class="tag rec">推荐</span>' : '<span class="tag">—</span>'
+      return `<tr class="${rec}">
+        <td>${escapeHtml(x.platform)}</td>
+        <td class="name"><a href="${escapeAttr(x.url)}" target="_blank" rel="noreferrer">${escapeHtml(x.name)}</a></td>
+        <td class="price">¥ ${Number(x.price).toFixed(2)}</td>
+        <td>${x.sales ?? ''}</td>
+        <td>${escapeHtml(x.shopName ?? '')}</td>
+        <td>${x.shopRating ?? ''}</td>
+        <td>${tag}</td>
+      </tr>`
+    }).join('')
+
+    const top = payload.items.slice(0, 15)
+    const dist = echarts.init(document.getElementById('dist'))
+    dist.setOption({
+      backgroundColor: 'transparent',
+      grid: {left: 54, right: 16, top: 18, bottom: 36},
+      xAxis: {type:'category', axisLabel:{color:'#a2a8b8', rotate: 28}, data: top.map(x => x.platform.toUpperCase())},
+      yAxis: {type:'value', axisLabel:{color:'#a2a8b8'}},
+      series: [{type:'bar', data: top.map(x => x.price), itemStyle:{color:'#7c5cff', borderRadius:[6,6,0,0]}}],
+      tooltip: {trigger:'axis'}
+    })
+
+    const trend = echarts.init(document.getElementById('trend'))
+    const series = payload.series || []
+    trend.setOption({
+      backgroundColor: 'transparent',
+      grid: {left: 54, right: 16, top: 18, bottom: 36},
+      xAxis: {type:'category', axisLabel:{color:'#a2a8b8'}, data: series.map(x => x.day)},
+      yAxis: {type:'value', axisLabel:{color:'#a2a8b8'}},
+      series: [{type:'line', data: series.map(x => x.price), smooth:true, symbolSize:7, lineStyle:{width:3,color:'#2bd576'}, itemStyle:{color:'#2bd576'}}],
+      tooltip: {trigger:'axis'}
+    })
+
+    addEventListener('resize', () => {
+      dist.resize()
+      trend.resize()
+    })
+
+    function escapeHtml(s){
+      return String(s ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')
+    }
+    function escapeAttr(s){
+      return escapeHtml(s).replaceAll("'","&#39;")
+    }
+  </script>
+</body>
+</html>

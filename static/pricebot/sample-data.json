@@ -1,0 +1,95 @@
+{
+	"items": [
+		{
+			"platform": "jd",
+			"id": "100000001",
+			"name": "蓝牙耳机 TWS 主动降噪 40dB 透明模式",
+			"price": 129.0,
+			"sales": "1.2万+",
+			"shopRating": 4.8,
+			"shopName": "声浪旗舰店",
+			"url": "https://item.jd.com/100000001.html"
+		},
+		{
+			"platform": "jd",
+			"id": "100000002",
+			"name": "蓝牙耳机 半入耳 低延迟 游戏模式",
+			"price": 89.9,
+			"sales": "8.6千+",
+			"shopRating": 4.6,
+			"shopName": "极简数码专营店",
+			"url": "https://item.jd.com/100000002.html"
+		},
+		{
+			"platform": "taobao",
+			"id": "tb_90001",
+			"name": "蓝牙耳机 入耳式 HiFi 动圈 续航30小时",
+			"price": 79.0,
+			"sales": "2.1万+",
+			"shopRating": 4.7,
+			"shopName": "音色实验室",
+			"url": "https://item.taobao.com/item.htm?id=90001"
+		},
+		{
+			"platform": "taobao",
+			"id": "tb_90002",
+			"name": "蓝牙耳机 运动挂耳 防水IPX7",
+			"price": 59.0,
+			"sales": "3.4万+",
+			"shopRating": 4.5,
+			"shopName": "跑者装备店",
+			"url": "https://item.taobao.com/item.htm?id=90002"
+		},
+		{
+			"platform": "pdd",
+			"id": "pdd_70001",
+			"name": "蓝牙耳机 真无线 迷你轻巧 触控操作",
+			"price": 39.9,
+			"sales": "5.8万+",
+			"shopRating": 4.4,
+			"shopName": "百货直供",
+			"url": "https://mobile.yangkeduo.com/goods.html?goods_id=70001"
+		},
+		{
+			"platform": "pdd",
+			"id": "pdd_70002",
+			"name": "蓝牙耳机 ANC 降噪 双设备连接",
+			"price": 99.0,
+			"sales": "1.6万+",
+			"shopRating": 4.6,
+			"shopName": "数码优选",
+			"url": "https://mobile.yangkeduo.com/goods.html?goods_id=70002"
+		},
+		{
+			"platform": "jd",
+			"id": "100000003",
+			"name": "机械键盘 87键 热插拔 RGB 背光",
+			"price": 169.0,
+			"sales": "5.4千+",
+			"shopRating": 4.7,
+			"shopName": "键盘工坊",
+			"url": "https://item.jd.com/100000003.html"
+		},
+		{
+			"platform": "taobao",
+			"id": "tb_91001",
+			"name": "机械键盘 104键 经典青轴 电竞",
+			"price": 119.0,
+			"sales": "9.9千+",
+			"shopRating": 4.6,
+			"shopName": "键盘玩家",
+			"url": "https://item.taobao.com/item.htm?id=91001"
+		},
+		{
+			"platform": "pdd",
+			"id": "pdd_71001",
+			"name": "机械键盘 98键 三模连接 旋钮",
+			"price": 139.0,
+			"sales": "1.3万+",
+			"shopRating": 4.5,
+			"shopName": "好物严选",
+			"url": "https://mobile.yangkeduo.com/goods.html?goods_id=71001"
+		}
+	]
+}
+

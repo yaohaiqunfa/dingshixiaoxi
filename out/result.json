@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "platform": "pdd",
+      "id": "pdd_70001",
+      "name": "蓝牙耳机 真无线 迷你轻巧 触控操作",
+      "price": 39.9,
+      "sales": 58000,
+      "shopRating": 4.4,
+      "shopName": "百货直供",
+      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=70001",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.8,
+      "recommended": true,
+      "keyword": "蓝牙耳机"
+    },
+    {
+      "platform": "taobao",
+      "id": "tb_90002",
+      "name": "蓝牙耳机 运动挂耳 防水IPX7",
+      "price": 59,
+      "sales": 34000,
+      "shopRating": 4.5,
+      "shopName": "跑者装备店",
+      "url": "https://item.taobao.com/item.htm?id=90002",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.6106412755535562,
+      "recommended": true,
+      "keyword": "蓝牙耳机"
+    },
+    {
+      "platform": "taobao",
+      "id": "tb_90001",
+      "name": "蓝牙耳机 入耳式 HiFi 动圈 续航30小时",
+      "price": 79,
+      "sales": 21000,
+      "shopRating": 4.7,
+      "shopName": "音色实验室",
+      "url": "https://item.taobao.com/item.htm?id=90001",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.521395011745889,
+      "recommended": true,
+      "keyword": "蓝牙耳机"
+    },
+    {
+      "platform": "jd",
+      "id": "100000002",
+      "name": "蓝牙耳机 半入耳 低延迟 游戏模式",
+      "price": 89.9,
+      "sales": 8600,
+      "shopRating": 4.6,
+      "shopName": "极简数码专营店",
+      "url": "https://item.jd.com/100000002.html",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.3413580246913578,
+      "recommended": true,
+      "keyword": "蓝牙耳机"
+    },
+    {
+      "platform": "pdd",
+      "id": "pdd_70002",
+      "name": "蓝牙耳机 ANC 降噪 双设备连接",
+      "price": 99,
+      "sales": 16000,
+      "shopRating": 4.6,
+      "shopName": "数码优选",
+      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=70002",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.32263457789773553,
+      "recommended": true,
+      "keyword": "蓝牙耳机"
+    },
+    {
+      "platform": "jd",
+      "id": "100000001",
+      "name": "蓝牙耳机 TWS 主动降噪 40dB 透明模式",
+      "price": 129,
+      "sales": 12000,
+      "shopRating": 4.8,
+      "shopName": "声浪旗舰店",
+      "url": "https://item.jd.com/100000001.html",
+      "scrapedAt": "2026-04-14T03:36:02.863Z",
+      "valueScore": 0.21720647773279353,
+      "recommended": false,
+      "keyword": "蓝牙耳机"
+    }
+  ]
+}

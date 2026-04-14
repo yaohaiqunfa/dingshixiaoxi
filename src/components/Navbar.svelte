@@ -45,6 +45,9 @@ const logOutAndShowToast = () => {
                 </a>
             {/if}
         </li>
+        <li>
+            <a title="PriceBot" href="/pricebot">PriceBot</a>
+        </li>
         <!-- <li>
 			<a
 				title="اﻹعدادات"

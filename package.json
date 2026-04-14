@@ -2,10 +2,14 @@
 	"name": "telegram-scheduler",
 	"version": "0.0.1",
 	"private": true,
+	"bin": {
+		"pricebot": "bin/pricebot.js"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"pricebot": "node bin/pricebot.js",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
